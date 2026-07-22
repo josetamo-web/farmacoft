@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaCoft - Resumen del Proyecto</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --verde-principal: #198754;
+            --verde-oscuro: #146c43;
+            --verde-claro: #e8f5e9;
+        }
+
+        .bg-verde {
+            background-color: var(--verde-principal) !important;
+        }
+
+        .text-verde {
+            color: var(--verde-principal) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--verde-claro) 0%, #ffffff 100%);
+            border-bottom: 3px solid var(--verde-principal);
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge-sprint {
+            font-size: 0.85rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-verde sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-prescription-bottle-medical fs-4"></i>
+                FarmaCoft
+            </a>
+            <span class="navbar-text text-white-50 d-none d-md-inline">
+                Sistema Web de Gestión y Ventas para Farmacias
+            </span>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-success bg-opacity-10 text-verde mb-2 fw-semibold border border-success border-opacity-25">
+                        Documento de Proyecto
+                    </span>
+                    <h1 class="display-5 fw-bold text-dark mb-3">
+                        Automatización, Control de Inventario y Ventas POS
+                    </h1>
+                    <p class="lead text-secondary mb-4">
+                        FarmaCoft es un sistema web diseñado para optimizar el control de stock, emitir comprobantes, evitar pérdidas por vencimiento de medicamentos y agilizar la atención al cliente en farmacias físicas.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#modulos" class="btn btn-success bg-verde btn-lg px-4 fw-semibold">
+                            <i class="fa-solid fa-cubes me-2"></i> Ver Módulos
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block text-center">
+                    <i class="fa-solid fa-clinic-medical text-verde" style="font-size: 10rem; opacity: 0.8;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- Objetivos del Sistema -->
+        <section class="mb-5">
+            <h2 class="fw-bold text-dark mb-4 border-bottom pb-2">
+                <i class="fa-solid fa-bullseye text-verde me-2"></i> Objetivos Clave
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4">
+                        <div class="icon-box bg-success bg-opacity-10 text-verde mb-3">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h5 class="fw-bold">Alertas de Stock y Vencimiento</h5>
+                        <p class="text-secondary small mb-0">
+                            Notificaciones automáticas para productos con bajo stock o próximos a vencer en 30 días, evitando multas y pérdidas.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4">
+                        <div class="icon-box bg-success bg-opacity-10 text-verde mb-3">
+                            <i class="fa-solid fa-cash-register"></i>
+                        </div>
+                        <h5 class="fw-bold">Venta Rápida </h5>
+                        <p class="text-secondary small mb-0">
+                            Punto de venta dinámico con lector de código de barras, cálculo de IGV, emisión de tickets PDF y control de recetas médicas.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 p-4">
+                        <div class="icon-box bg-success bg-opacity-10 text-verde mb-3">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h5 class="fw-bold">Reportes Estratégicos</h5>
+                        <p class="text-secondary small mb-0">
+                            Dashboard con métricas de ventas del día, productos más vendidos y reporte de ganancias reales (<span class="fst-italic">Venta - Compra</span>).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Módulos del Sistema -->
+        <section id="modulos" class="mb-5">
+            <h2 class="fw-bold text-dark mb-4 border-bottom pb-2">
+                <i class="fa-solid fa-list-check text-verde me-2"></i> Módulos y Funcionalidades
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-verde mb-2"><i class="fa-solid fa-shield-halved me-2"></i> 1. Seguridad y Roles</h5>
+                            <ul class="text-secondary small ps-3 mb-0">
+                                <li>Control de acceso (Login / Logout).</li>
+                                <li><b>Administrador:</b> Acceso total y reportes.</li>
+                                <li><b>Vendedor:</b> Ventas y consulta de stock.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-verde mb-2"><i class="fa-solid fa-pills me-2"></i> 2. Inventario y Productos</h5>
+                            <ul class="text-secondary small ps-3 mb-0">
+                                <li>CRUD completo de medicamentos.</li>
+                                <li>Gestión de laboratorios y categorías.</li>
+                                <li>Marca si "Requiere Receta Médica".</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-custom h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-verde mb-2"><i class="fa-solid fa-cart-shopping me-2"></i> 3. Punto de Venta (POS)</h5>
+                            <ul class="text-secondary small ps-3 mb-0">
+                                <li>Carrito de compra rápido.</li>
+                                <li>Boletas y Facturas en PDF.</li>
+                                <li>Adjunto obligatorio de foto/PDF de receta.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="card card-custom h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-verde mb-2"><i class="fa-solid fa-users me-2"></i> 4. Clientes</h5>
+                            <ul class="text-secondary small ps-3 mb-0">
+                                <li>Registro de clientes con DNI / RUC.</li>
+                                <li>Opción de "Cliente General" para ventas rápidas.</li>
+                                <li>Historial de compras por cliente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-6">
+                    <div class="card card-custom h-100 p-3">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-verde mb-2"><i class="fa-solid fa-chart-pie me-2"></i> 5. Dashboard y Reportes</h5>
+                            <ul class="text-secondary small ps-3 mb-0">
+                                <li>KPIs: Ventas del día, ganancias y vencimientos.</li>
+                                <li>Filtros por rango de fechas y productos TOP.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white py-4 border-top border-success border-3">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">FarmaCoft &copy; 2026 - Todos los derechos reservados</p>
+            <small class="text-white-50">Proyecto de Sistema de Gestión y Ventas para Farmacia</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

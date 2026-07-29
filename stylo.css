@@ -11,30 +11,36 @@ body{
 }
 
 header{
-    background-color: #1ec46b;
+    background: linear-gradient(90deg, #22a59a, #1ec46b);
     color: #f8fafc;
     text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 header h1{
-    font-size: 2.5rem;
-    color: #f8fafc;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
 }
 
 header p {
-    font-size: 1.1rem;
-    color: #f8fafc;
+    font-size: 1.2rem;
+    color: #e6fdf7;
 }
 
 nav {
-    background-color: #22a59a;
+    background: linear-gradient(90deg, #1ec46b, #22a59a);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 0.5rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -42,11 +48,31 @@ nav a {
     text-decoration: none;
     padding: 1rem 1.5rem;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 nav a:hover {
     background-color: #21baa8;
+    color: #f0fdf4;
+}
+
+nav a:hover::after {
+    width: 60%;
 }
 
 main {
@@ -54,9 +80,18 @@ main {
     margin: 2rem auto;
     padding: 0 1rem;
 }
+.contenedor-doble{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contenedor-doble section{
+    flex: 1;
+}
 
 section {
     background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 6px;
@@ -73,18 +108,63 @@ section p {
     color: #555555;
 }
 
+section:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
 form label {
     font-weight: 600;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+table th, table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #22a59a;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background-color: #f1f5f9;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
 input[type="email"],
 textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.3rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: inherit;
+}
+
+input[type="email"]:focus, textarea:focus {
+    border-color: #22a59a;
+    box-shadow: 0 0 5px rgba(34, 165, 154, 0.5);
+    outline: none;
 }
 
 button[type="submit"] {
@@ -110,7 +190,39 @@ hr {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #222222;
+    background: linear-gradient(90deg, #22a59a, #1ec46b);
     color: #ffffff;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contenedor-doble{
+        flex-direction: column;
+    }
+
+    section {
+        padding: 0.8rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
 }

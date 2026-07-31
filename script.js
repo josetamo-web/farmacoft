@@ -37,3 +37,21 @@ botonmodo.addEventListener("click", alternarmodo);
 btnMenu.addEventListener("click", () => {
     nav.classList.toggle("activo")
 })
+
+const btnArriba = document.querySelector("#btn-arriba");
+
+// Función para mostrar/ocultar el botón según scroll
+function mostrarBotonArriba() {
+    if (window.scrollY > 200) {
+        btnArriba.style.display = "block";
+    } else {
+        btnArriba.style.display = "none";
+    }
+}
+
+function irArriba() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+window.addEventListener("scroll", mostrarBotonArriba);
+btnArriba.addEventListener("click", irArriba);

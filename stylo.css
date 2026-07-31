@@ -237,6 +237,24 @@ hr {
     border: 0;
     border-top: 1px solid #eeeeee;
 }
+
+.boton-arriba{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #22a59a;
+    color: #fff;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+}
+
+.boton-arriba:hover{
+    background: #1ec46b;
+}
 footer {
     text-align: center;
     padding: 1rem;

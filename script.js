@@ -1,6 +1,9 @@
 const body = document.querySelector("body");
 const botonmodo = document.querySelector("#btn-tema");
 
+const btnMenu = document.querySelector("#btn-menu");
+const nav = document.querySelector("nav");
+
 let esdedia = true;
 
 const hora = new Date().getHours();
@@ -30,3 +33,7 @@ function alternarmodo() {
     }
 }
 botonmodo.addEventListener("click", alternarmodo);
+
+btnMenu.addEventListener("click", () => {
+    nav.classList.toggle("activo")
+})

@@ -49,6 +49,15 @@ body.oscuro footer {
   cursor: pointer;
 }
 
+.hamburguesa{
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
 header{
     background: linear-gradient(90deg, #22a59a, #1ec46b);
     color: #f8fafc;
@@ -74,6 +83,7 @@ nav {
     background: linear-gradient(90deg, #1ec46b, #22a59a);
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
     position: sticky;
@@ -219,6 +229,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #17ab5c;
+    
 }
 
 hr {
@@ -242,9 +253,10 @@ footer {
     }
 
     nav a {
+        display: none;
         width: 100%;
         text-align: center;
-        padding: 0.5rem;
+        padding: 0.8rem;
         font-size: 0.9rem;
         border-top: 1px solid rgba(255,255,255,0.2);
     }
@@ -263,5 +275,12 @@ footer {
 
     header p {
         font-size: 0.95rem;
+    }
+    .hamburguesa{
+        display: block;
+        margin: 0.5rem;
+    }
+    nav.activo a{
+        display: block;
     }
 }

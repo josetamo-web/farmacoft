@@ -10,6 +10,45 @@ body{
     color: #334155;
 }
 
+body.claro {
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+body.oscuro {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.oscuro header {
+  background: #1f2937;
+  color: #f1f1f1;
+}
+
+body.oscuro nav {
+  background: #111827;
+}
+
+body.oscuro section {
+  background-color: #1e293b;
+  color: #f1f1f1;
+}
+
+body.oscuro footer {
+  background: #1f2937;
+  color: #f1f1f1;
+}
+
+.boton-modo {
+  margin: 0;
+  background-color: #08e7c5;
+  color: #17212c;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
 header{
     background: linear-gradient(90deg, #22a59a, #1ec46b);
     color: #f8fafc;

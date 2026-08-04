@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARBERIA DON FIGARO</title>
 </head>
+
 <body>
-    <header>
+    <header id="inicio">
         <h1> barberia don figaro</h1>
-            <nav>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </nav>
-    
+        <nav>
+            <ul>
+                <li><a href="#inicio">inicio</a></li>
+                <li><a href="#"></a>servicios</li>
+                <li><a href="#"></a>contacto</li>
+            </ul>
+        </nav>
+
     </header>
+    <main>
+        <section id="servicios">
+            <h2>Nuestros servicios</h2>
+            <p>Somos una barbería tradicional enfocada en brindarte el mejor estilo atención personalizada y acabados impecables.</p>
+            <ul>
+                <li>Corte clásico - Bs 25</li>
+                <li>Perfilado de barba - Bs 20</li>
+                <li>Corte y barba - Bs 40</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Reserva tu turno</h2>
+            <form>
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="comentario">Tu comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="4"></textarea>
+                </div>
+            </form>
+
+            <button type="button" id="btn-confirmar">Confirmar turno</button>
+            <p id="mensaje" class="oculto"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; parcial 1 - jose fernando tamo mejia - 3 de agosto de 2026</p>
+    </footer>
 </body>
+
 </html>

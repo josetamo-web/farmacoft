@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header {
+    background-color: #1b1b1b; /* Color 3 (Hex) */
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #c9a050;
+}
+
+section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #dcd6cd;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #1b1b1b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #c9a050;
+    padding-bottom: 0.4rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+section ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+section ul li {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+form input,
+form textarea {
+    padding: 0.6rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+#btn-confirmar {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#btn-confirmar:hover {
+    background-color: #c9a050;
+    color: #1b1b1b;
+}
+
+#mensaje {
+    margin-top: 1.2rem;
+    padding: 0.8rem;
+    background-color: #e8f4ea;
+    border: 1px solid #a3d9a5;
+    border-radius: 4px;
+    color: #1e4620;
+    font-weight: bold;
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+footer {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1.2rem;
+    }
+}

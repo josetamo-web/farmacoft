@@ -198,7 +198,7 @@ form {
     gap: 1rem;
 }
 
-
+input[type="text"],
 input[type="email"],
 textarea {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -210,6 +210,7 @@ textarea {
     font-family: inherit;
 }
 
+input[type="text"]:focus,
 input[type="email"]:focus, textarea:focus {
     border-color: #22a59a;
     box-shadow: 0 0 5px rgba(34, 165, 154, 0.5);
@@ -236,6 +237,29 @@ hr {
     margin-top: 1.2rem;
     border: 0;
     border-top: 1px solid #eeeeee;
+}
+/* aviso */
+.aviso {
+    display: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.aviso.error {
+    display: block;
+    color: #e74c3c;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.aviso.exito {
+    display: block;
+    color: #2ecc71;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
 }
 
 .boton-arriba{

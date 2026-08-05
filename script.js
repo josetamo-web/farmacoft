@@ -4,6 +4,9 @@ const botonmodo = document.querySelector("#btn-tema");
 const btnMenu = document.querySelector("#btn-menu");
 const nav = document.querySelector("nav");
 
+const formularioPedido = document.querySelector("#form-pedido");
+const avisoPedido = document.querySelector("#error-pedido");
+
 let esdedia = true;
 
 const hora = new Date().getHours();
@@ -55,3 +58,32 @@ function irArriba() {
 
 window.addEventListener("scroll", mostrarBotonArriba);
 btnArriba.addEventListener("click", irArriba);
+
+
+function RevisarPedido(event) {
+    event.preventDefault();
+
+    const nombre = document.querySelector("#nombre").value;
+    const correo = document.querySelector("#correo").value;
+    const mensaje = document.querySelector("#mensaje").value;
+
+    if (nombre === "") {
+        avisoPedido.textContent = "Falta tu nombre caserito";
+        avisoPedido.classList.add("error");
+        avisoPedido.classList.remove("exito");
+    } else if (correo.includes("@") === false) {
+        avisoPedido.textContent = "Ese correo no parece correo le falta el @";
+        avisoPedido.classList.add("error");
+        avisoPedido.classList.remove("exito");
+    } else if (mensaje === "") {
+        avisoPedido.textContent = "Escribe un mensaje para poder ayudarte";
+        avisoPedido.classList.add("error");
+        avisoPedido.classList.remove("exito");
+    } else {
+        avisoPedido.textContent = "Pedido recibido caserito Te contactamos hoy";
+        avisoPedido.classList.add("exito");
+        avisoPedido.classList.remove("error");
+    }
+}
+
+formularioPedido.addEventListener("submit", RevisarPedido);

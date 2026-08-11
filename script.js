@@ -80,9 +80,7 @@ function RevisarPedido(event) {
         avisoPedido.classList.add("error");
         avisoPedido.classList.remove("exito");
     } else {
-        avisoPedido.textContent = "Pedido recibido caserito Te contactamos hoy";
-        avisoPedido.classList.add("exito");
-        avisoPedido.classList.remove("error");
+        formularioPedido.submit();
     }
 }
 

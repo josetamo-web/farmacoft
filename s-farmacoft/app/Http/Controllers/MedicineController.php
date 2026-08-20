@@ -29,6 +29,10 @@ class MedicineController extends Controller
             'descripcion' => 'required|string',
             'precio'      => 'required|numeric|min:0',
             'stock'       => 'required|integer|min:0',
+        ],[
+            'stock.required' => 'El campo stock es obligatorio.',
+            'stock.integer'  => 'El valor ingresado en stock debe ser un numero entero.',
+            'stock.min'      => 'El stock no puede ser una cantidad negativa.',
         ]);
 
         Medicine::create($request->all());
@@ -44,6 +48,10 @@ class MedicineController extends Controller
             'descripcion' => 'required|string',
             'precio'      => 'required|numeric|min:0',
             'stock'       => 'required|integer|min:0',
+        ],[
+            'stock.required' => 'El campo stock es obligatorio.',
+            'stock.integer'  => 'El valor ingresado en stock debe ser un numero entero.',
+            'stock.min'      => 'El stock no puede ser una cantidad negativa.',
         ]);
 
         $medicine->update($request->all());

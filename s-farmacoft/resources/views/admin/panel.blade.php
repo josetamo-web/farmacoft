@@ -73,7 +73,10 @@
 
             <p>
                 <label for="stock">Cantidad / Stock:</label><br>
-                <input type="number" id="stock" name="stock" required>
+                <input type="number" id="stock" name="stock" value="{{ old('stock') }}">
+                @error('stock')
+                <br><span style="color: red; font-size: 14px;">{{ $message }}</span>
+                @enderror
             </p>
 
             <button type="submit">Guardar Medicamento</button>

@@ -17,7 +17,7 @@
                 <p>Tu farmacia de confianza con atencion rapida y servicio a tu alcance</p>
             </div>
 
-            <!-- Área de Usuario  -->
+            <!-- area de Usuario  -->
             <div class="user-bar">
                 <button type="button" id="btn-tema" class="boton-modo">modo dia</button>
                 <!-- este bloque se muestra si el usuario no ha iniciado sesión -->

@@ -5,8 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\ContactController;
-use App\Models\Medicine;
-use App\Models\Contact;
 
 /*
 |--------------------------------------------------------------------------
